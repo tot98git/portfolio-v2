@@ -9,7 +9,9 @@ const activities = [
   'Toti is thinking.',
   'Toti is doing great stuff.'
 ];
-const Homepage = () => {
+const Homepage = ({ history }) => {
+  const handleNav = (url) => () => history.push(url);
+
   return (
     <div className="home-wrapper">
       <div className="container">
@@ -18,6 +20,11 @@ const Homepage = () => {
           <h1>.dev</h1>
         </div>
         <h4>{activities[Math.floor(Math.random() * activities.length)]}</h4>
+        <div className="nav">
+          <button className="item" onClick={handleNav('playlist')}>
+            Coding playlist
+          </button>
+        </div>
         <div className="social">
           <a href="https://github.com/tot98git">
             <img
