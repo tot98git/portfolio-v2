@@ -1,0 +1,18 @@
+.playlist-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+
+  .playlist-container {
+    width: 60%;
+    margin: auto;
+
+    iframe {
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+  }
+}
