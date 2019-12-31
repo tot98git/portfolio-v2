@@ -1,18 +1,129 @@
+$base-color: #3326b4;
+
 .playlist-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 100vh;
 
   .playlist-container {
-    width: 60%;
+    width: 40%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
 
-    iframe {
+    @media only screen and (max-width: 600px) {
       width: 100%;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
     }
+
+    .list-container {
+      padding: 3%;
+      box-sizing: border-box;
+
+      .list-item {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin: 2% 0;
+        animation: fade 1s ease;
+        box-shadow: 0px 1px 1px $base-color;
+        padding: 3%;
+        box-sizing: border-box;
+        &:hover {
+          cursor: default;
+        }
+
+        &:active {
+          background-color: $base-color;
+          transition: background-color 0.5s;
+
+          & > div {
+            color: white;
+            transition: all 0.5s;
+            fill: white;
+
+            &._blue {
+              color: white;
+            }
+          }
+        }
+
+        .block {
+          text-align: left;
+          font-size: 100%;
+
+          h1 {
+            margin: 2% 0;
+            font-size: 150%;
+          }
+
+          h4 {
+            margin: 2% 0;
+          }
+
+          &._blue {
+            color: $base-color;
+          }
+
+          &._bold {
+            font-weight: bold;
+          }
+
+          &._width-70 {
+            width: 70%;
+          }
+
+          &._width-20 {
+            width: 20%;
+          }
+
+          &._width-10 {
+            width: 10%;
+          }
+        }
+      }
+    }
+
+    .btn-container {
+      width: 100%;
+      padding: 3%;
+
+      .nav-btn {
+        padding: 3%;
+        background-color: white;
+        margin: 2%;
+        border: 0;
+        outline: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &._selected {
+          border-bottom: 1px solid $base-color;
+        }
+      }
+    }
+
+    @for $i from 1 through 6 {
+      .list-item:nth-child(#{i}) {
+        color: black;
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

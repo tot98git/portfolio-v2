@@ -1,15 +1,14 @@
 import React from 'react';
 
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Homepage from './Homepage';
 import Playlist from './Playlist';
 
 export default (
-  <HashRouter>
+  <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Homepage} />
-      <Route exact path="/playlist" component={Playlist} />
+      <Route path="/ranking" component={Playlist} />
     </Switch>
-  </HashRouter>
+  </BrowserRouter>
 );

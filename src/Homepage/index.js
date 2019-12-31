@@ -19,7 +19,17 @@ const Homepage = ({ history }) => {
           <h1>Toti</h1>
           <h1>.dev</h1>
         </div>
-        <h4>{activities[Math.floor(Math.random() * activities.length)]}</h4>
+        <h4>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu rutrum
+          erat, et egestas diam. Curabitur a risus tempus, lobortis velit nec,
+          convallis dolor. Sed interdum tempus ligula vitae imperdiet. Nullam
+          volutpat eget sapien sed efficitur. Pellentesque urna nisl,
+          pellentesque ut nisi ut, posuere fringilla lectus. Duis lacinia
+          viverra dolor sed egestas. Fusce at massa at lacus maximus tristique
+          posuere et quam. Orci varius natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus. Suspendisse ut mattis
+          lorem.
+        </h4>
         <div className="nav">
           <button className="item" onClick={handleNav('playlist')}>
             Coding playlist
