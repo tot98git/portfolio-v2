@@ -2,7 +2,6 @@
   "name": "portfolio-v2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://tot98git.github.io/portfolio-v2",
   "dependencies": {
     "eslint-config-airbnb": "^17.1.0",
     "gh-pages": "^2.0.1",
