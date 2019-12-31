@@ -8,7 +8,7 @@ import Playlist from './Playlist';
 export default (
   <BrowserRouter>
     <Switch>
-      <Route path="/ranking" component={Playlist} />
+      <Route path="/" component={Playlist} />
     </Switch>
   </BrowserRouter>
 );
